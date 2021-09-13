@@ -19,9 +19,15 @@ There is two further loan constraints: 1. The user cannot get more than one bank
 ## Work
 
 The Work section displays the user's "Pay", which is achieved through working.
-It also have three buttons: Work, Bank, and Downpay loan (which is hidden when the user has no loan): - The work button grants the user 100kr every time it gets clicked. - The Bank button transfers the funds from the "Pay" account to the "Balance" account, which is located in the Bank. - If the user have taken a loan, 10% of the Pay will be deducted and used as downpayment on the loan,
-before the remaining 90% gets transferred to the user's Balance. - If the current loan amount is less than 10% of the Pay getting transferred, the loan gets fully downpaid before
-the remaining funds go to the user's Balance. - The Downpay button takes the current funds from the Pay account and uses it to downpay the current loan. - If the current loan amount is less than the funds in the Pay account, the rest will remain in Pay.
+It also have three buttons: Work, Bank, and Downpay loan (which is hidden when the user has no loan):
+
+- The work button grants the user 100kr every time it gets clicked.
+- The Bank button transfers the funds from the "Pay" account to the "Balance" account, which is located in the Bank.
+  - If the user have taken a loan, 10% of the Pay will be deducted and used as downpayment on the loan, before the remaining 90% gets transferred to the user's Balance.
+  - If the current loan amount is less than 10% of the Pay getting transferred, the loan gets fully downpaid before
+    the remaining funds go to the user's Balance.
+- The Downpay button takes the current funds from the Pay account and uses it to downpay the current loan.
+  - If the current loan amount is less than the funds in the Pay account, the rest will remain in Pay.
 
 ## Store
 
@@ -35,6 +41,9 @@ This is fetched from a provided API.
 ### Info section
 
 The info section displays image, name, description, and price of the laptop that is chosen in the Laptop section.
-It also contains a "Buy Now" button that the user can click to buy the disred laptop: - The buy now button first validates whether the bank balance is sufficient to purchase the selected laptop.
-If the user do not have enouch money in the Bank, a message is displayed telling that the user need to work more to afford that laptop. - When the user have sufficient funds to buy the chosen laptop, the amount is deducted from the Bank Balance,
-and the user receives feedback that congratulates on the newly bought laptop.
+It also contains a "Buy Now" button that the user can click to buy the disred laptop:
+
+- The buy now button first validates whether the bank balance is sufficient to purchase the selected laptop.
+  If the user do not have enouch money in the Bank, a message is displayed telling that the user need to work more to afford that laptop.
+- When the user have sufficient funds to buy the chosen laptop, the amount is deducted from the Bank Balance,
+  and the user receives feedback that congratulates on the newly bought laptop.
