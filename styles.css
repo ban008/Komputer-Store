@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    box-sizing: border-box;
+}
+
+body, html {
+    background-color: #ddf1f3;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background-color: #333333;
+    padding: .6rem;
+    -webkit-box-shadow: 0px 3px 10px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 3px 10px -2px rgba(0,0,0,0.75);
+    box-shadow: 0px 3px 10px -2px rgba(0,0,0,0.75);
+}
+
+#page-title {
+    margin-left: .5rem;
+    font-weight: 400;
+    font-size: 30px;
+    font-weight: bold;
+    color: #d9d9d9;
+}
+
+.store-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 90px 0;
+}
+
+.bottom-container {
+    background-color: #bee2e6;
+    padding: 20px 50px;
+    border-radius: 4px;
+    width: 85%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-height: 23rem;
+    margin-bottom: 50px;
+    -webkit-box-shadow: 0px 4px 9px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 4px 9px -3px rgba(0,0,0,0.75);
+    box-shadow: 0px 4px 9px -3px rgba(0,0,0,0.75);
+}
+
+.bottom-container div {
+    margin-left: 40px;
+}
+
+.bottom-container div:nth-child(1) {
+    margin-left: 0px;
+}
+
+.bottom-container div:nth-child(2) {
+    max-width: 400px;
+}
+
+.bottom-container div:nth-child(3) {
+    margin-left:auto;
+}
+
+#info-desc {
+    word-wrap: break-word;
+    color:#575151;
+}
+
+#info-price {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+.card {
+    margin: 0 10px;
+    background-color: #bee2e6;
+    padding: 20px 50px;
+    border-radius: 4px;
+    height: 23rem;
+    width: 23rem;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-shadow: 0px 4px 9px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 4px 9px -3px rgba(0,0,0,0.75);
+    box-shadow: 0px 4px 9px -3px rgba(0,0,0,0.75);
+}
+
+.card-header {
+    margin-bottom: 30px;
+}
+
+.balance-container{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.balance, #info-price, #loan-balance {
+    font-weight: bold;
+}
+
+.laptop-card select {
+    margin-bottom: 20px;
+    height: 30px;
+    outline: none;
+}
+
+.laptop-card div h3 {
+    margin-bottom: 10px;
+}
+
+.laptop-card div ul {
+    margin-left: 17px;
+}
+
+#image {
+    border-radius: 4px;
+    height: 190px;
+    width: 270px;
+}
+
+img {
+    box-shadow: 0px 2px 4px #696969;
+}
+
+button {
+    display: inline-block;
+    padding: 12px 18px;
+    font-size: 27px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 1px 2px 0 #262626;
+    margin: 0.5rem;
+}
+
+button:hover {
+    filter: brightness(90%);
+}
+#loan-button {
+    background-color: #a84040;
+}
+#bank-button {
+    background-color: #8FBC8F;
+}
+#work-button {
+    color: lightgray;
+    background-color: #2F4F4F;
+}
+#buy-button {
+    background-color:  #4da64d;
+}
+
+#downpay-button {
+    background-color: #8bdcff;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dialog-container{
+    border-radius: 4px;
+    max-width: 300px;
+    background-color: lightgrey;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#requested-loan {
+    margin-top: 20px;
+    height: 30px;
+    border-radius: 4px;
+    outline: none;
+    padding-left: 5px;
+    border-color: #696969;
+    margin-bottom: 20px;
+}
+
+#cancel-loan {
+    font-size: 14px;
+    background-color: #a84040;
+    color: white;
+}
+
+#submit-loan {
+    font-size: 14px;
+    background-color: #8FBC8F;
+    color: white;
+}
+
+.hide {
+    display:none;
+}
+
+@media only screen and (max-width: 800px) {
+    .store-container {
+        justify-content: center;
+    }
+
+    .top-container {
+      flex-direction: column;
+      width: 85%;
+    }
+
+    .card {
+        margin: 0 0 20px 0;
+        width: 100%;
+    }
+    
+    .bottom-container {
+        flex-direction: column;
+    }
+
+    .bottom-container div:nth-child(3) {
+        margin: 20px 0 0;
+    }
+  }

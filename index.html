@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" />
+    <title>Computer Store</title>
+</head>
+
+<body>
+    <header>
+        <h1 id="page-title">Komputer Store</h1>
+    </header>
+
+    <div class="store-container">
+        <!-- TOP -->
+        <div class="top-container">
+            <!-- BANK BOX -->
+            <div class="card">
+                <h2 class="card-header">Joe Banker</h2>
+                <div class="balance-container">
+                    <p>Balance</p>
+                    <p class="balance" id="bank-balance">0 Kr</p>
+                </div>
+                <div id="loan-container" class="hide balance-container">
+                    <p id="outstanding-loan">Outstanding Loan</p>
+                    <p id="loan-balance">0 Kr</p>
+                </div>
+                <button onclick="openLoanDialog()" id="loan-button">Get a loan</button>
+            </div>
+            <!-- WORK BOX -->
+            <div class="card">
+                <h2 class="card-header">Work</h2>
+                <div class="balance-container">
+                    <p>Pay</p>
+                    <p class="balance" id="pay-balance">0 Kr</p>
+                </div>
+                <button onclick="handleWork()" id="work-button">Work</button>
+                <button onclick="handleBank()" id="bank-button">Bank</button>
+                <button onclick="handleDownpay()" id="downpay-button" class="hide">Downpay Loan</button>
+            </div>
+
+            <!-- LAPTOP BOX -->
+            <div class="card laptop-card">
+                <h2 class="card-header">Laptops</h2>
+                <select name="select laptop" id="select-laptop" class="select-laptop"></select>
+                <div>
+                    <h3>Features:</h3>
+                    <ul id="laptop-feat"></ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- BOTTOM -->
+        <div class="bottom-container">
+            <div>
+                <img id="image" src="" alt="Laptop image unavailable">
+            </div>
+            <div>
+                <h1 id=info-title>Laptop Name</h1>
+                <p id="info-desc">Laptop description</p>
+            </div>
+            <div>
+                <p id="info-price">0 NOK</p>
+                <button onclick="handleBuy()" id="buy-button">BUY NOW</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay" class="hide overlay">
+        <div class="dialog-container">
+            <h3>Please enter your requested loan amount:</h3>
+            <input type="text" id="requested-loan" accept="number">
+            <div>
+                <button onclick="closeLoanDialog()" id="cancel-loan">Cancel</button>
+                <button onclick="handleLoan()" id="submit-loan">Request Loan</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
